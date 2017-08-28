@@ -128,17 +128,13 @@ else
   
   chmod 777 devpoint.sh
   
-echo -e "                                         \033[38;5;208m"
-echo -e "--------------------------------------------------------\e[36m"
-echo -e "                                                                                                      \e[36m"
-echo -e "   _      _    _ __         __ _   ________       __           ______      _ _____   __        __     \e[36m"
-echo -e "  | |    | |  | |\ \       / /| | |______ /      /  \         | |__\ \    | |_____|  \ \      / /     \e[36m"
-echo -e "  | |____| |  | | \ \     / / | |     / /       / /\ \        | |   \ \   | |_____    \ \    / /      \e[36m"
-echo -e "  | |____| |  | |  \ \   / /  | |    / /       / /__\ \       | |    ) )  | |_____|    \ \  / /       \e[36m"
-echo -e "  | |    | |  | |   \ \_/ /   | |   / /____   / / __ \ \   _  | |__ / /   | |_____      \ \/ /        \e[36m"
-echo -e "  |_|    |_|  |_|    \___/    |_|  /_______| /_/      \ \ |_| |_|_ /_/    |_|_____|      \__/         \e[36m"                                                                                                          \e[36m"
-echo -e "                                                                                                      \e[36m" 
-echo -e "                                                                                                      \e[36m"                   
-echo -e "--------------------------------------------------------\e[36m"
-  ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/HmzaDevh1.lua -l 1 -E $@
+  #Adding some color. By @MehdiHS
+   echo -e "\033[38;5;208m"
+   echo -e "     > Channel : @DevPointTeam                        "
+   echo -e "     > Developer : @TH3_GHOST                       "
+   echo -e "     > Bot ID : @SuperDevPoint                        "
+   echo -e "     > Github : GitHub.com/DevPointTeam/DevPoint     "
+   echo -e "                                              \033[0;00m"
+   echo -e "\e[36m"
+  ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/devpoint.lua -l 1 -E $@
 fi
