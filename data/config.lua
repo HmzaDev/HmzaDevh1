@@ -1,7 +1,7 @@
 do local _ = {
-  about_text = "Welcome to DevPoint For more information Subscribe to the channel @DevPointTeam",
+  about_text = "",
   enabled_plugins = {
-     "plugins",
+    "plugins",
     "supergroup",
     "msg_checks",
     "lock_fwd",
@@ -48,8 +48,6 @@ do local _ = {
     "lock_join",
     "info",
     "lock_kds"
-    "sudolist"
-
   },
   help_text = "",
   help_text_realm = "",
@@ -58,9 +56,8 @@ do local _ = {
     data = "data/moderation.json"
   },
   sudo_users = {
-    124406196,
-    197920376,
-    224372882
+    138292005,
+    0,
   }
 }
 return _
