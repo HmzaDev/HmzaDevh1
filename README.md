@@ -1,2 +1,1 @@
-
-https://t.me/dq12bo
+[المطور](https://telegram.me/hmza97)
