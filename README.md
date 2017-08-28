@@ -10,4 +10,4 @@
 
 
 
-[(HmzaDevقناه 📢)](https://telegram.me/HmzaDev)
+[(HmzaDevقناه 📢)](https://telegram.me/dq12bo)
