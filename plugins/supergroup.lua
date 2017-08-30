@@ -1717,73 +1717,73 @@ local function run(msg, matches)
 		if matches[1] == 'قفل' and is_momod(msg) then
 			local chat_id = msg.to.id
 			if matches[2] == 'الصوت' then
-			local msg_type = 'Audio'
+			local msg_type = 'الصوت.'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return msg_type.." has been muted"
+					return msg_type.." تم ✔️ قفل في المجموعه 🔐"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return " 😠بالفعل مقفوله  "..msg_type.."في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'الصور' then
-			local msg_type = 'Photo'
+			local msg_type = 'الصور'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return msg_type.." has been muted"
+					return msg_type.." تم ✔️ قفل في المجموعه 🔐"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return " 😠بالفعل مقفوله  "..msg_type.."في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'الفيديو' then
-			local msg_type = 'Video'
+			local msg_type = '.الفيديو'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return msg_type.." has been muted"
+					return msg_type..".تم ✔️ قفل  في المجموعه 🔐"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return "😠بالفعل مقفوله"..msg_type..".في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'الصور المتحركه' then
-			local msg_type = 'Gifs'
+			local msg_type = ' الصور المتحركه'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return msg_type.." have been muted"
+					return msg_type..".تم ✔️ قفل  في المجموعه 🔐"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return "😠بالفعل مقفوله"..msg_type..".في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'الفايلات' then
-			local msg_type = 'Documents'
+			local msg_type = '.الفايلات'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return msg_type.." have been muted"
+					return msg_type..".تم ✔️ قفل  في المجموعه 🔐"
 				else
-					return "SuperGroup mute "..msg_type.." is already on"
+					return "😠بالفعل مقفوله"..msg_type..".في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'الدردشه' then
-			local msg_type = 'Text'
+			local msg_type = '.الدردشه'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return msg_type.." has been muted"
+					return msg_type..".تم ✔️ قفل  في المجموعه 🔐"
 				else
-					return "Mute "..msg_type.." is already on"
+					return "😠بالفعل مقفوله"..msg_type..".في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'المجموعه' then
-			local msg_type = 'All'
+			local msg_type = '.المجموعه'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return "Mute "..msg_type.."  has been enabled"
+					return msg_type..".تم ✔️ قفل  في المجموعه 🔐"
 				else
-					return "Mute "..msg_type.." is already on"
+					return "😠بالفعل مقفوله"..msg_type..".في المجموعه 🔐"
 				end
 			end
 		end
@@ -1800,63 +1800,63 @@ local function run(msg, matches)
 				end
 			end
 			if matches[2] == 'الصور' then
-			local msg_type = 'Photo'
+			local msg_type = 'الصور'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
-					return msg_type.." has been unmuted"
+					return msg_type..".تم ✔️ قفل  في المجموعه 🔐"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "😠بالفعل مقفوله"..msg_type..".في المجموعه 🔐"
 				end
 			end
 			if matches[2] == 'الفيديو' then
-			local msg_type = 'Video'
+			local msg_type = 'الفيديو'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
 					return msg_type.." has been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "تم ✔️ فتح في المجموعه يمكنك الارسال "..msg_type.."الان 🔓"
 				end
 			end
 			if matches[2] == 'الصور المتحركه' then
-			local msg_type = 'Gifs'
+			local msg_type = 'الصور المتحركه.'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
 					return msg_type.." have been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "تم ✔️ فتح في المجموعه يمكنك الارسال "..msg_type.."الان 🔓"
 				end
 			end
 			if matches[2] == 'الفايلات' then
-			local msg_type = 'Documents'
+			local msg_type = 'الفايلات.'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
 					return msg_type.." have been unmuted"
 				else
-					return "Mute "..msg_type.." is already off"
+					return "تم ✔️ فتح في المجموعه يمكنك الارسال "..msg_type.."الان 🔓"
 				end
 			end
 			if matches[2] == 'الدردشه' then
-			local msg_type = 'Text'
+			local msg_type = 'الدردشه.'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute message")
 					unmute(chat_id, msg_type)
 					return msg_type.." has been unmuted"
 				else
-					return "Mute text is already off"
+					return "تم ✔️ فتح في المجموعه يمكنك الارسال "..msg_type.."الان 🔓"
 				end
 			end
 			if matches[2] == 'المجموعه' then
-			local msg_type = 'All'
+			local msg_type = 'المجموعه.'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
 					return "Mute "..msg_type.." has been disabled"
 				else
-					return "Mute "..msg_type.." is already disabled"
+					return "تم ✔️ فتح في المجموعه يمكنك الارسال "..msg_type.."الان 🔓"
 				end
 			end
 		end
