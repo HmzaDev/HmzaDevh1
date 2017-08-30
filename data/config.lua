@@ -17,6 +17,7 @@ do local _ = {
     "dowelcome",
     "filter",
     "get",
+    "rdod",
     "help",
     "help1",
     "help2",
