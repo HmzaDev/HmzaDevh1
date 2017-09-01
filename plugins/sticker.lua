@@ -13,35 +13,41 @@ KASPER  TP (BY @kasper_dev)
 |_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
                                                       
 --]]
-local function run(msg, matches)
-	if matches[1] == 'bc' or matches[1] == 'بث' and is_admin1(msg) then
-		local response = matches[3]
-		--send_large_msg("chat#id"..matches[2], response)
-		send_large_msg("channel#id"..matches[2], response)
-	end
-	if matches[1] == 'sher' or matches[1] == 'اذاعة' then
-		if is_sudo(msg) then -- Only sudo !
-			local data = load_data(_config.moderation.data)
-			local groups = 'groups'
-			local response = matches[2]
-			for k,v in pairs(data[tostring(groups)]) do
-				chat_id =  v
-				local chat = 'chat#id'..chat_id
-				local channel = 'channel#id'..chat_id
-				send_large_msg(chat, response)
-				send_large_msg(channel, response)
-			end
-		end
-	end
+local function run(msg, success, result)
+  local receiver = get_receiver(msg)
+  if success then
+    local file = 'sticker'..msg.from.id..'.webp'
+    print('File downloaded to:', result)
+    os.rename(result, file)
+    print('File moved to:', file)
+    send_document(get_receiver(msg), file, ok_cb, false)
+    redis:del("photo:sticker")
+  else
+    print('Error downloading: '..msg.id)
+    send_large_msg(receiver, 'Failed, please try again!', ok_cb, false)
+  end
+end
+local function run(msg,matches)
+    local receiver = get_receiver(msg)
+    local group = msg.to.id
+    if msg.reply_id then
+       if msg.to.type == 'photo' and redis:get("photo:sticker") then
+        if redis:set("photo:sticker", "waiting") then
+        end
+       end
+      if matches[1] == "ksuw" or matches[1] == "تحويل ملصق" then
+     redis:get("photo:sticker")  
+        load_photo(msg.reply_id, tosticker, msg)
+    end
+end
 end
 return {
   patterns = {
-    "^[#!/](sher) (.+)$",
-    "^[#!/](bc) (%d+) (.*)$",
-    "^(اذاعة) (.+)$",
-    "^(بث) (%d+) (.*)$",
+ "^[/#!](ksuw)$",
+ "^(تحويل ملصق)$",
+ "%[(photo)%]",
   },
-  run = run
+  run = run,
 }
 --[[
  _____ ____     ____   ___ _____ 
